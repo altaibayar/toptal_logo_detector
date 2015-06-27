@@ -98,7 +98,7 @@
         //NSLog(@"contourAreaRate \t\t\t\t %f", fabs(_logoTemplate.contourAreaRate - feature.contourAreaRate));
         return NO;
     }
-    
+
 //    NSLog(@"------------------------------------------");
 //    NSLog(@"%@", [_logoTemplate description]);
 //    NSLog(@"%@", [feature description]);
@@ -109,14 +109,6 @@
 //          fabs(_logoTemplate.skeletLengthRate - feature.skeletLengthRate),
 //          fabs(_logoTemplate.contourAreaRate - feature.contourAreaRate)
 //          );
-        
-    //double error = 0.0;   
-    //error += fabs(_logoTemplate.convexHullAreaRate - feature.convexHullAreaRate);
-    //error += fabs(_logoTemplate.minRectAreaRate - feature.minRectAreaRate);
-    //error += fabs(_logoTemplate.skeletLengthRate - feature.skeletLengthRate);
-    //error += fabs(_logoTemplate.widthHeightRate - feature.widthHeightRate);        
-    //NSLog(@"%f", error);    
-    //return error < 0.3;
     
     return YES;
 }

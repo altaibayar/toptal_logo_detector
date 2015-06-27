@@ -104,12 +104,9 @@
     [[MSERManager sharedInstance] detectRegions: gray intoVector: msers];
     if (msers.size() == 0) { return; };
     
-    int logoCount = 0;
-
     std::vector<cv::Point> *bestMser = nil;
     double bestPoint = 10.0;
     
-    //std::vector<cv::Point> mser = [ImageUtils maxMser: &gray];
     std::for_each(msers.begin(), msers.end(), [&] (std::vector<cv::Point> &mser) 
     {
         MSERFeature *feature = [[MSERManager sharedInstance] extractFeature: &mser];
@@ -124,7 +121,6 @@
                     bestMser = &mser;
                 }
                 
-                logoCount ++;
                 //[ImageUtils drawMser: &mser intoImage: &image withColor: GREEN];
             }
             else 
@@ -152,7 +148,7 @@
     }
 
 #if DEBUG    
-    const char* str_fps = [[NSString stringWithFormat: @"MSER: %d / %ld", logoCount, msers.size()] cStringUsingEncoding: NSUTF8StringEncoding];
+    const char* str_fps = [[NSString stringWithFormat: @"MSER: %ld", msers.size()] cStringUsingEncoding: NSUTF8StringEncoding];
     cv::putText(image, str_fps, cv::Point(10, H - 10), CV_FONT_HERSHEY_PLAIN, 1.0, RED);
 #endif
     
