@@ -17,7 +17,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
 
-    if (true || [self isFirstStart])
+    if ([self isFirstStart])
     {   
         [[MLManager sharedInstance] learn: [UIImage imageNamed: @"toptal logo"]];        
         [self setFirstStartFlag];
