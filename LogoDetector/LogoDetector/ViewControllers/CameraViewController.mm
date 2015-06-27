@@ -77,7 +77,7 @@
     rect.points(points);
     
     //normalize image
-    cv::Mat M = [GeometryUtil getAffineMatrix: points toSize: rect.size];
+    cv::Mat M = [GeometryUtil getPerspectiveMatrix: points toSize: rect.size];
     cv::Mat normalizedImage = [GeometryUtil normalizeImage: &gray withTranformationMatrix: &M withSize: rect.size.width];
 
     //get maxMser from normalized image

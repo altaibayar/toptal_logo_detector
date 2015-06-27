@@ -11,14 +11,26 @@
 
 #import "MSERFeature.h"
 
+/*
+ This singleton class wraps object recognition function
+ */
 @interface MLManager : NSObject
 
 + (MLManager *) sharedInstance;
 
+/*
+ Stores feature from the biggest MSER in the templateImage
+ */
 - (void) learn: (UIImage *) templateImage;
 
+/*
+ Sum of differences between logo feature and given feature
+ */
 - (double) distance: (MSERFeature *) feature;
 
+/*
+ Return boolean if the given feature is near to learned on
+ */
 - (BOOL) isToptalLogo: (MSERFeature *) feature;
 
 @end

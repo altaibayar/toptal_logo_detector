@@ -10,7 +10,6 @@
 
 @interface FPS : NSObject
 
-+(int) tick;
 +(void) draw: (cv::Mat) rgb;
 
 @end

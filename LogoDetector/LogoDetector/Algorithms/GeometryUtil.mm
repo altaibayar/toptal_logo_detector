@@ -12,7 +12,7 @@
 
 #define PYTHAGOR(p1,p2) (sqrt((p1.x-p2.x)*(p1.x-p2.x) + (p1.y-p2.y)*(p1.y-p2.y)))
 
-+ (cv::Mat) getAffineMatrix: (cv::Point2f[]) points toSize: (cv::Size2f) size
++ (cv::Mat) getPerspectiveMatrix: (cv::Point2f[]) points toSize: (cv::Size2f) size
 {
     cv::Point2f dst[] = { 
         cv::Point2f(0, 0), 
