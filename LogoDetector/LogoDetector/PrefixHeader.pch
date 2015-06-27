@@ -1,0 +1,21 @@
+//
+//  PrefixHeader.pch
+//  LogoDetector
+//
+//  Created by altaibayar tseveenbayar on 13/05/15.
+//  Copyright (c) 2015 altaibayar tseveenbayar. All rights reserved.
+//
+
+#ifndef LogoDetector_PrefixHeader_pch
+#define LogoDetector_PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#ifdef __cplusplus
+
+#include <opencv2/opencv.hpp>
+
+#endif
+
+#endif

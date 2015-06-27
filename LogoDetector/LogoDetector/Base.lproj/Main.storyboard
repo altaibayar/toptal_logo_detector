@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="cva-TF-emf">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--Camera View Controller-->
+        <scene sceneID="ggV-EW-pu8">
+            <objects>
+                <viewController id="cva-TF-emf" customClass="CameraViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="GeO-Yj-oi2"/>
+                        <viewControllerLayoutGuide type="bottom" id="uNT-FZ-clz"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="pFC-8g-U5k">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4Vz-cE-do7">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="426"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="4Vz-cE-do7" secondAttribute="height" multiplier="160:213" id="gp0-cD-jnc"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sKq-e8-sun">
+                                <rect key="frame" x="0.0" y="426" width="320" height="142"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IbJ-rJ-fZl" customClass="RoundButton">
+                                        <rect key="frame" x="104" y="15" width="112" height="112"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="IbJ-rJ-fZl" secondAttribute="height" multiplier="1:1" id="s31-cE-3yk"/>
+                                        </constraints>
+                                        <state key="normal" title="Start">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="btn_TouchUp:" destination="cva-TF-emf" eventType="touchUpInside" id="N2K-G3-YB1"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="IbJ-rJ-fZl" firstAttribute="top" secondItem="sKq-e8-sun" secondAttribute="top" constant="15" id="3jh-Ia-gxm"/>
+                                    <constraint firstAttribute="bottom" secondItem="IbJ-rJ-fZl" secondAttribute="bottom" constant="15" id="mUF-MQ-QBV"/>
+                                    <constraint firstAttribute="centerX" secondItem="IbJ-rJ-fZl" secondAttribute="centerX" id="vNJ-FU-v4t"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="4Vz-cE-do7" secondAttribute="trailing" id="6dS-o1-oMC"/>
+                            <constraint firstItem="sKq-e8-sun" firstAttribute="top" secondItem="4Vz-cE-do7" secondAttribute="bottom" id="Cwt-Fj-SAq"/>
+                            <constraint firstItem="sKq-e8-sun" firstAttribute="leading" secondItem="pFC-8g-U5k" secondAttribute="leading" id="P0N-bD-bFy"/>
+                            <constraint firstAttribute="trailing" secondItem="sKq-e8-sun" secondAttribute="trailing" id="Qp4-Hu-yGi"/>
+                            <constraint firstItem="uNT-FZ-clz" firstAttribute="top" secondItem="sKq-e8-sun" secondAttribute="bottom" id="TVr-Qr-ojL"/>
+                            <constraint firstItem="4Vz-cE-do7" firstAttribute="leading" secondItem="pFC-8g-U5k" secondAttribute="leading" id="Ufx-sb-QZq"/>
+                            <constraint firstItem="4Vz-cE-do7" firstAttribute="top" secondItem="pFC-8g-U5k" secondAttribute="top" id="VS1-3Y-Sfn"/>
+                        </constraints>
+                    </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="btn" destination="IbJ-rJ-fZl" id="ijV-nP-f39"/>
+                        <outlet property="img" destination="4Vz-cE-do7" id="cmT-OE-9GZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rsJ-98-Dwo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="519" y="543"/>
+        </scene>
+    </scenes>
+</document>
