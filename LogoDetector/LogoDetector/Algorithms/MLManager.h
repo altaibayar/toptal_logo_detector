@@ -1,3 +1,8 @@
+////////
+// This sample is published as part of the blog article at www.toptal.com/blog 
+// Visit www.toptal.com/blog and subscribe to our newsletter to read great posts
+////////
+
 //
 //  MLManager.h
 //  LogoDetector
@@ -29,7 +34,7 @@
 - (double) distance: (MSERFeature *) feature;
 
 /*
- Return boolean if the given feature is near to learned on
+ Returns true if the given feature is similar to the one learned from the template
  */
 - (BOOL) isToptalLogo: (MSERFeature *) feature;
 
